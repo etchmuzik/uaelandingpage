@@ -54,13 +54,6 @@
     .card__m{color:#bdbdbd;font-size:14px;margin-top:6px}
     .pill{display:inline-block;margin-top:10px;padding:6px 10px;border:1px solid var(--rule);border-radius:999px;font-size:12px;color:#bdbdbd}
 
-    /* Tech picks scroller */
-    .picks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-    @media (max-width:900px){.picks{grid-template-columns:1fr}}
-    .pick{display:flex;gap:16px;border:1px solid var(--rule);border-radius:14px;padding:16px;background:linear-gradient(180deg,#111,#0E0E0E)}
-    .pick__img{width:110px;height:110px;background:linear-gradient(135deg,#1a1a1a,#0d0d0d);border-radius:10px;position:relative;overflow:hidden;flex-shrink:0}
-    .pick__img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;border-radius:10px}
-
     /* Event block */
     .bullets{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
     .bullet{border:1px solid var(--rule);border-radius:999px;padding:8px 12px;font-size:12px;color:#c7c7c7}
@@ -176,119 +169,6 @@
           </div>
           <div class="card__bd"><div class="card__t">Executive Gift Set</div><div class="card__m">Curated box with card, ribbon, and seal. Ready to present.</div><div class="pill">Volume pricing</div></div>
         </article>
-      </div>
-    </section>
-
-    <!-- Tech picks sourced from catalog -->
-    <section class="wrap" aria-labelledby="tech">
-      <h2 id="tech" class="sec__h2">Executive Tech Selections</h2>
-      <p class="sec__lead">Modern, practical, and brandable technology gifts curated for leadership teams and VIP clients.</p>
-      <div class="picks">
-        <div class="pick">
-          <div class="pick__img">
-            <img
-              src="images/smart-organizer.jpg"
-              srcset="images/smart-organizer.jpg 1x, images/smart-organizer@2x.jpg 2x"
-              alt="ONEX Smart Mag A5 Organizer with powerbank"
-              width="110"
-              height="110"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <div class="card__t">ONEX Smart Mag A5 Organizer (ITFO 1199/1200/1201)</div>
-            <div class="card__m">10,000mAh powerbank + 15W Mag charging, recycled PU, light‑up logo. Includes 32GB USB.</div>
-            <div class="pill">Branding: UV / Laser</div>
-          </div>
-        </div>
-        <div class="pick">
-          <div class="pick__img">
-            <img
-              src="images/albeck-powerbank.jpg"
-              srcset="images/albeck-powerbank.jpg 1x, images/albeck-powerbank@2x.jpg 2x"
-              alt="ALBECK Recycled Leather Powerbank"
-              width="110"
-              height="110"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <div class="card__t">ALBECK Recycled Leather Powerbank (ITPB 1140/1141)</div>
-            <div class="card__m">10,000mAh with 10W wireless and 18W PD fast charge. Executive finish.</div>
-            <div class="pill">Eco: RCS</div>
-          </div>
-        </div>
-        <div class="pick">
-          <div class="pick__img">
-            <img
-              src="images/fusion-travel-powerbank.jpg"
-              srcset="images/fusion-travel-powerbank.jpg 1x, images/fusion-travel-powerbank@2x.jpg 2x"
-              alt="FUSION 6-in-1 Travel Powerbank with international plugs"
-              width="110"
-              height="110"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <div class="card__t">FUSION 6‑in‑1 Travel Powerbank (ITPB 1247)</div>
-            <div class="card__m">10,000mAh with dual Mag wireless + swappable US/UK/EU/AUS plugs, inbuilt C & Lightning.</div>
-            <div class="pill">Travel‑ready</div>
-          </div>
-        </div>
-      </div>
-      <div class="divider"></div>
-      <div class="picks">
-        <div class="pick">
-          <div class="pick__img">
-            <img
-              src="images/brela-laptop-stand.jpg"
-              srcset="images/brela-laptop-stand.jpg 1x, images/brela-laptop-stand@2x.jpg 2x"
-              alt="BRELA Laptop Stand with retractable cable set"
-              width="110"
-              height="110"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <div class="card__t">BRELA Laptop Stand + Retractable Cable Set (MTST 1167/1168)</div>
-            <div class="card__m">Compact recycled stand with retractable 6‑in‑1 cable. Kraft gift box.</div>
-            <div class="pill">Desk upgrade</div>
-          </div>
-        </div>
-        <div class="pick">
-          <div class="pick__img">
-            <img
-              src="images/solano-mag-powerbank.jpg"
-              srcset="images/solano-mag-powerbank.jpg 1x, images/solano-mag-powerbank@2x.jpg 2x"
-              alt="SOLANO Mag Wireless Powerbank with kickstand"
-              width="110"
-              height="110"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <div class="card__t">SOLANO Mag Wireless Powerbank (ITPB 1248)</div>
-            <div class="card__m">10,000mAh, 15W Mag wireless + inbuilt C & Lightning and iWatch charging. Kickstand.</div>
-            <div class="pill">All‑in‑one</div>
-          </div>
-        </div>
-        <div class="pick">
-          <div class="pick__img">
-            <img
-              src="images/skross-passport-set.jpg"
-              srcset="images/skross-passport-set.jpg 1x, images/skross-passport-set@2x.jpg 2x"
-              alt="SKROSS Diplomat Passport Set with luggage tag"
-              width="110"
-              height="110"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <div class="card__t">SKROSS Diplomat Passport Set (TASK 2198)</div>
-            <div class="card__m">Premium passport wallet + luggage tag. Swiss design, gift box ready.</div>
-            <div class="pill">Travel suite</div>
-          </div>
-        </div>
       </div>
     </section>
 
