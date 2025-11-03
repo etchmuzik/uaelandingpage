@@ -32,7 +32,8 @@
     .countdown__t{font-variant-numeric:tabular-nums;font-weight:700}
     .tag{border:1px solid var(--rule);border-radius:999px;padding:8px 12px;font-size:12px;color:#c7c7c7}
     .hero__media{margin-top:38px;border:1px solid var(--rule);border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#121212,#0b0b0b);padding:18px}
-    .hero__img{width:100%;height:460px;object-fit:cover;background:#0a0a0a;display:flex;align-items:center;justify-content:center;color:#444;font-size:14px}
+    .hero__img{width:100%;height:460px;object-fit:cover;background:linear-gradient(135deg,#1a1a1a,#0d0d0d);display:flex;align-items:center;justify-content:center;color:#555;font-size:14px;position:relative}
+    .hero__img::before{content:'🎁';font-size:120px;position:absolute;opacity:0.15}
 
     /* Section */
     section{padding:64px 0;border-top:1px solid var(--rule)}
@@ -46,7 +47,8 @@
     @media (max-width:640px){.grid--4{grid-template-columns:1fr}}
 
     .card{border:1px solid var(--rule);border-radius:14px;overflow:hidden;background:linear-gradient(180deg,#111,#0E0E0E)}
-    .card__img{background:#0c0c0c;height:190px;display:flex;align-items:center;justify-content:center;color:#444;font-size:12px}
+    .card__img{background:linear-gradient(135deg,#1a1a1a,#0d0d0d);height:190px;display:flex;align-items:center;justify-content:center;color:#555;font-size:48px;position:relative}
+    .card__img::after{content:attr(data-icon);position:absolute}
     .card__bd{padding:16px}
     .card__t{font-weight:600}
     .card__m{color:#bdbdbd;font-size:14px;margin-top:6px}
@@ -56,7 +58,8 @@
     .picks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
     @media (max-width:900px){.picks{grid-template-columns:1fr}}
     .pick{display:flex;gap:16px;border:1px solid var(--rule);border-radius:14px;padding:16px;background:linear-gradient(180deg,#111,#0E0E0E)}
-    .pick__img{width:110px;height:110px;background:#0b0b0b;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#444;font-size:10px;flex-shrink:0}
+    .pick__img{width:110px;height:110px;background:linear-gradient(135deg,#1a1a1a,#0d0d0d);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#555;font-size:32px;flex-shrink:0;position:relative}
+    .pick__img::after{content:attr(data-icon);position:absolute}
 
     /* Event block */
     .bullets{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
@@ -102,7 +105,7 @@
       <a href="#lead" class="btn">Book Your Package</a>
     </div>
     <div class="hero__media" aria-hidden="true">
-      <div class="hero__img">Hero Image: Add hero-giftset.webp</div>
+      <div class="hero__img"></div>
     </div>
   </header>
 
@@ -112,10 +115,10 @@
       <h2 id="gifts" class="sec__h2">Premium Corporate Gifts, Tailored</h2>
       <p class="sec__lead">Elegant totes, dateless leather diaries, shawls, and curated executive sets. Fully brandable. MOQ 100+. Delivery across UAE.</p>
       <div class="grid grid--4">
-        <article class="card"><div class="card__img">Tote Image</div><div class="card__bd"><div class="card__t">Beach‑Style Tote</div><div class="card__m">Durable canvas with discreet UAE detail. Ideal for employee kits.</div><div class="pill">MOQ 100</div></div></article>
-        <article class="card"><div class="card__img">Diary Image</div><div class="card__bd"><div class="card__t">Dateless Leather Diary</div><div class="card__m">Embossed logo, gold-edged pages. Year‑agnostic gifting.</div><div class="pill">Custom branding</div></div></article>
-        <article class="card"><div class="card__img">Shawl Image</div><div class="card__bd"><div class="card__t">Shawl & Scarf</div><div class="card__m">Refined weave, gift‑ready wrap. Subtle national palette.</div><div class="pill">UAE-wide delivery</div></div></article>
-        <article class="card"><div class="card__img">Executive Set</div><div class="card__bd"><div class="card__t">Executive Gift Set</div><div class="card__m">Curated box with card, ribbon, and seal. Ready to present.</div><div class="pill">Volume pricing</div></div></article>
+        <article class="card"><div class="card__img" data-icon="👜"></div><div class="card__bd"><div class="card__t">Beach‑Style Tote</div><div class="card__m">Durable canvas with discreet UAE detail. Ideal for employee kits.</div><div class="pill">MOQ 100</div></div></article>
+        <article class="card"><div class="card__img" data-icon="📔"></div><div class="card__bd"><div class="card__t">Dateless Leather Diary</div><div class="card__m">Embossed logo, gold-edged pages. Year‑agnostic gifting.</div><div class="pill">Custom branding</div></div></article>
+        <article class="card"><div class="card__img" data-icon="🧣"></div><div class="card__bd"><div class="card__t">Shawl & Scarf</div><div class="card__m">Refined weave, gift‑ready wrap. Subtle national palette.</div><div class="pill">UAE-wide delivery</div></div></article>
+        <article class="card"><div class="card__img" data-icon="🎁"></div><div class="card__bd"><div class="card__t">Executive Gift Set</div><div class="card__m">Curated box with card, ribbon, and seal. Ready to present.</div><div class="pill">Volume pricing</div></div></article>
       </div>
     </section>
 
@@ -125,7 +128,7 @@
       <p class="sec__lead">Modern, practical, and brandable technology gifts curated for leadership teams and VIP clients.</p>
       <div class="picks">
         <div class="pick">
-          <div class="pick__img">ONEX</div>
+          <div class="pick__img" data-icon="📱"></div>
           <div>
             <div class="card__t">ONEX Smart Mag A5 Organizer (ITFO 1199/1200/1201)</div>
             <div class="card__m">10,000mAh powerbank + 15W Mag charging, recycled PU, light‑up logo. Includes 32GB USB.</div>
@@ -133,7 +136,7 @@
           </div>
         </div>
         <div class="pick">
-          <div class="pick__img">ALBECK</div>
+          <div class="pick__img" data-icon="🔋"></div>
           <div>
             <div class="card__t">ALBECK Recycled Leather Powerbank (ITPB 1140/1141)</div>
             <div class="card__m">10,000mAh with 10W wireless and 18W PD fast charge. Executive finish.</div>
@@ -141,7 +144,7 @@
           </div>
         </div>
         <div class="pick">
-          <div class="pick__img">FUSION</div>
+          <div class="pick__img" data-icon="⚡"></div>
           <div>
             <div class="card__t">FUSION 6‑in‑1 Travel Powerbank (ITPB 1247)</div>
             <div class="card__m">10,000mAh with dual Mag wireless + swappable US/UK/EU/AUS plugs, inbuilt C & Lightning.</div>
@@ -152,7 +155,7 @@
       <div class="divider"></div>
       <div class="picks">
         <div class="pick">
-          <div class="pick__img">BRELA</div>
+          <div class="pick__img" data-icon="💻"></div>
           <div>
             <div class="card__t">BRELA Laptop Stand + Retractable Cable Set (MTST 1167/1168)</div>
             <div class="card__m">Compact recycled stand with retractable 6‑in‑1 cable. Kraft gift box.</div>
@@ -160,7 +163,7 @@
           </div>
         </div>
         <div class="pick">
-          <div class="pick__img">SOLANO</div>
+          <div class="pick__img" data-icon="🔌"></div>
           <div>
             <div class="card__t">SOLANO Mag Wireless Powerbank (ITPB 1248)</div>
             <div class="card__m">10,000mAh, 15W Mag wireless + inbuilt C & Lightning and iWatch charging. Kickstand.</div>
@@ -168,7 +171,7 @@
           </div>
         </div>
         <div class="pick">
-          <div class="pick__img">DIPLOMAT</div>
+          <div class="pick__img" data-icon="✈️"></div>
           <div>
             <div class="card__t">SKROSS Diplomat Passport Set (TASK 2198)</div>
             <div class="card__m">Premium passport wallet + luggage tag. Swiss design, gift box ready.</div>
@@ -188,7 +191,7 @@
         <div class="bullet">On‑Site Management</div>
       </div>
       <div class="hero__media" aria-hidden="true" style="margin-top:20px">
-        <div class="hero__img" style="height:320px">Event Photo: Add event-shot.webp</div>
+        <div class="hero__img" style="height:320px"></div>
       </div>
       <div style="margin-top:18px"><a href="#lead" class="btn btn--outline">Request Event + Gift Quote</a></div>
     </section>
@@ -247,7 +250,9 @@
     <section class="wrap" id="lead" aria-labelledby="lead-h">
       <h2 id="lead-h" class="sec__h2">Secure Your National Day Package</h2>
       <p class="sec__lead">Limited slots remaining before 20 Nov cut‑off. Submit your brief to lock production.</p>
-      <form class="form" onsubmit="event.preventDefault(); alert('Thanks. Our team will contact you shortly.');">
+      <form class="form" name="uae-national-day-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="uae-national-day-inquiry" />
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
         <input class="in" name="company" placeholder="Company Name" required />
         <input class="in" name="name" placeholder="Full Name" required />
         <input class="in" name="phone" placeholder="Phone (UAE)" required />
