@@ -98,6 +98,21 @@
     .in--compact{padding:12px;font-size:14px}
     textarea.in--compact{min-height:80px}
 
+    /* WhatsApp banner */
+    .whatsapp-banner{background:linear-gradient(135deg,#25D366,#1DA851);padding:16px 20px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.2)}
+    .whatsapp-banner__link{display:inline-flex;align-items:center;gap:12px;color:#fff;text-decoration:none;transition:transform 0.2s ease}
+    .whatsapp-banner__link:hover{transform:scale(1.02)}
+    .whatsapp-banner__icon{font-size:28px;line-height:1}
+    .whatsapp-banner__content{text-align:left}
+    .whatsapp-banner__title{font-weight:600;font-size:18px;line-height:1.2}
+    .whatsapp-banner__sub{font-size:13px;opacity:0.9;margin-top:2px}
+    @media (max-width:640px){.whatsapp-banner__title{font-size:16px}.whatsapp-banner__icon{font-size:24px}}
+
+    /* Dual CTA buttons */
+    .dual-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn--inline{min-width:180px;width:auto}
+    @media (max-width:640px){.dual-cta{flex-direction:column}.btn--inline{width:100%}}
+
     /* Flag cue */
     .uae-cue{display:inline-flex;gap:6px;align-items:center}
     .uae-flag{display:inline-grid;grid-template-columns:12px 12px 12px 12px;height:10px;border-radius:2px;overflow:hidden;border:1px solid var(--rule)}
@@ -112,7 +127,21 @@
 <body>
   <div class="sticky-cta">
     <a href="#lead" class="btn">Book National Day Package</a>
-    <a href="https://wa.me/971581232600" class="btn btn--outline" aria-label="Chat on WhatsApp">WhatsApp Our Team</a>
+    <a href="https://wa.me/+971525409801" class="btn btn--outline" aria-label="Chat on WhatsApp">WhatsApp Our Team</a>
+  </div>
+
+  <!-- Pre-hero WhatsApp banner -->
+  <div class="whatsapp-banner">
+    <a href="https://wa.me/+971525409801?text=Hi!%20I'm%20interested%20in%20UAE%20National%20Day%20corporate%20gifts.%20Can%20you%20send%20me%20a%20quote%3F"
+       class="whatsapp-banner__link"
+       target="_blank"
+       rel="noopener noreferrer">
+      <span class="whatsapp-banner__icon">💬</span>
+      <div class="whatsapp-banner__content">
+        <div class="whatsapp-banner__title">Get Instant Quote on WhatsApp</div>
+        <div class="whatsapp-banner__sub">Instant reply guaranteed</div>
+      </div>
+    </a>
   </div>
 
   <header class="wrap hero" aria-label="Hero">
@@ -256,7 +285,15 @@
           </div>
         </div>
       </div>
-      <div style="margin-top:18px"><a href="#lead" class="btn">Request My Quote</a></div>
+      <div class="dual-cta" style="margin-top:18px">
+        <a href="https://wa.me/+971525409801?text=Hi!%20I'm%20interested%20in%20UAE%20National%20Day%20corporate%20gifts.%20Can%20you%20send%20me%20a%20quote%3F"
+           class="btn btn--whatsapp btn--inline"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="btn__icon">💬</span> WhatsApp Quote
+        </a>
+        <a href="#lead" class="btn btn--email btn--inline">📋 Email Quote</a>
+      </div>
       <div class="micro">Final pricing depends on item selection, branding (UV / Laser / Deboss), packaging, and delivery city.</div>
     </section>
 
@@ -268,15 +305,15 @@
       <div class="dual-path">
         <!-- WhatsApp Quick Quote -->
         <div class="path-card path-card--whatsapp">
-          <div class="path-card__badge">⚡ Fastest Response</div>
+          <div class="path-card__badge">⚡ Instant Reply</div>
           <h3 class="path-card__title">WhatsApp Quote</h3>
-          <p class="path-card__desc">Get a personalized quote in 15-30 minutes via WhatsApp chat</p>
+          <p class="path-card__desc">Get a personalized quote instantly via WhatsApp chat</p>
           <ul class="path-card__benefits">
             <li>✓ Instant connection</li>
             <li>✓ Real-time Q&A</li>
             <li>✓ Quick turnaround</li>
           </ul>
-          <a href="https://wa.me/971581232600?text=Hi!%20I'm%20interested%20in%20UAE%20National%20Day%20corporate%20gifts.%20Can%20you%20send%20me%20a%20quote%3F"
+          <a href="https://wa.me/+971525409801?text=Hi!%20I'm%20interested%20in%20UAE%20National%20Day%20corporate%20gifts.%20Can%20you%20send%20me%20a%20quote%3F"
              class="btn btn--whatsapp"
              target="_blank"
              rel="noopener noreferrer">
