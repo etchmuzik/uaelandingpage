@@ -67,6 +67,37 @@
     .micro{color:#9a9a9a;font-size:12px;margin-top:10px}
     .divider{height:1px;background:linear-gradient(90deg,transparent,var(--rule),transparent);margin:26px 0}
 
+    /* Dual-path lead capture */
+    .dual-path{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:32px}
+    @media (max-width:768px){.dual-path{grid-template-columns:1fr}}
+
+    .path-card{border:1px solid var(--rule);border-radius:16px;padding:28px;background:linear-gradient(180deg,#111,#0E0E0E);position:relative}
+    .path-card--whatsapp{background:linear-gradient(180deg,rgba(37,211,102,0.08),#0E0E0E)}
+    .path-card--email{background:linear-gradient(180deg,rgba(203,162,94,0.08),#0E0E0E)}
+
+    .path-card__badge{display:inline-block;background:var(--bg-2);border:1px solid var(--rule);border-radius:999px;padding:6px 12px;font-size:12px;color:#c7c7c7;margin-bottom:16px}
+
+    .path-card__title{font-family:"Tex Gyre Termes","Playfair Display",serif;font-size:24px;margin:0 0 10px;color:#fff}
+
+    .path-card__desc{color:#cfcfcf;font-size:15px;margin-bottom:18px;line-height:1.5}
+
+    .path-card__benefits{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:8px}
+    .path-card__benefits li{color:#bdbdbd;font-size:14px;padding-left:4px}
+
+    .path-card__social-proof{text-align:center;margin-top:16px;color:#9a9a9a;font-size:13px;font-style:italic}
+
+    .btn--whatsapp{background:linear-gradient(135deg,#25D366,#1DA851);color:#fff;display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;transition:transform 0.2s ease}
+    .btn--whatsapp:hover{transform:translateY(-2px)}
+
+    .btn--email{background:var(--gold);color:#0b0b0b;width:100%;transition:transform 0.2s ease}
+    .btn--email:hover{transform:translateY(-2px)}
+
+    .btn__icon{font-size:18px;line-height:1}
+
+    .form--compact{display:grid;grid-template-columns:1fr;gap:12px;max-width:none}
+    .in--compact{padding:12px;font-size:14px}
+    textarea.in--compact{min-height:80px}
+
     /* Flag cue */
     .uae-cue{display:inline-flex;gap:6px;align-items:center}
     .uae-flag{display:inline-grid;grid-template-columns:12px 12px 12px 12px;height:10px;border-radius:2px;overflow:hidden;border:1px solid var(--rule)}
@@ -231,21 +262,49 @@
 
     <!-- Lead capture -->
     <section class="wrap" id="lead" aria-labelledby="lead-h">
-      <h2 id="lead-h" class="sec__h2">Secure Your National Day Package</h2>
-      <p class="sec__lead">Limited slots remaining before 20 Nov cut‑off. Submit your brief to lock production.</p>
-      <form class="form" name="uae-national-day-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="uae-national-day-inquiry" />
-        <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
-        <input class="in" name="company" placeholder="Company Name" required />
-        <input class="in" name="name" placeholder="Full Name" required />
-        <input class="in" name="phone" placeholder="Phone (UAE)" required />
-        <input class="in" name="email" placeholder="Email Address" type="email" required />
-        <input class="in" name="qty" placeholder="Quantity (MOQ 100+)" required />
-        <input class="in" name="city" placeholder="City" />
-        <textarea class="in" name="notes" placeholder="Notes (custom branding, delivery, event details)"></textarea>
-        <button class="btn" type="submit">Submit Inquiry</button>
-      </form>
-      <div class="micro">By submitting, you agree to be contacted about National Day packages.</div>
+      <h2 id="lead-h" class="sec__h2">Get Your Custom Quote</h2>
+      <p class="sec__lead">Limited slots remaining before 20 Nov cut‑off. Choose your preferred way to connect.</p>
+
+      <div class="dual-path">
+        <!-- WhatsApp Quick Quote -->
+        <div class="path-card path-card--whatsapp">
+          <div class="path-card__badge">⚡ Fastest Response</div>
+          <h3 class="path-card__title">WhatsApp Quote</h3>
+          <p class="path-card__desc">Get a personalized quote in 15-30 minutes via WhatsApp chat</p>
+          <ul class="path-card__benefits">
+            <li>✓ Instant connection</li>
+            <li>✓ Real-time Q&A</li>
+            <li>✓ Quick turnaround</li>
+          </ul>
+          <a href="https://wa.me/971581232600?text=Hi!%20I'm%20interested%20in%20UAE%20National%20Day%20corporate%20gifts.%20Can%20you%20send%20me%20a%20quote%3F"
+             class="btn btn--whatsapp"
+             target="_blank"
+             rel="noopener noreferrer">
+            <span class="btn__icon">💬</span> Chat on WhatsApp
+          </a>
+          <div class="path-card__social-proof">47 companies requested quotes this week</div>
+        </div>
+
+        <!-- Email Form -->
+        <div class="path-card path-card--email">
+          <div class="path-card__badge">📋 Detailed Brief</div>
+          <h3 class="path-card__title">Email Quote Request</h3>
+          <p class="path-card__desc">Submit detailed requirements and we'll send a comprehensive proposal</p>
+          <form class="form form--compact" name="uae-national-day-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="uae-national-day-inquiry" />
+            <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
+            <input class="in in--compact" name="company" placeholder="Company Name" required />
+            <input class="in in--compact" name="name" placeholder="Full Name" required />
+            <input class="in in--compact" name="phone" placeholder="Phone (UAE)" required />
+            <input class="in in--compact" name="email" placeholder="Email Address" type="email" required />
+            <input class="in in--compact" name="qty" placeholder="Quantity (MOQ 100+)" required />
+            <textarea class="in in--compact" name="notes" placeholder="Notes (custom branding, delivery, event details)" rows="3"></textarea>
+            <button class="btn btn--email" type="submit">Send Detailed Request</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="micro" style="text-align:center;margin-top:2rem">By submitting, you agree to be contacted about National Day packages.</div>
     </section>
   </main>
 
