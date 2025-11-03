@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UAE National Day Corporate Gifts & Events | Beyond Dubai</title>
+  <meta name="description" content="Exclusive corporate gifts (MOQ 100+) and turnkey UAE National Day event production. Limited slots." />
+  <style>
+    :root{
+      --bg:#0E0E0E; --bg-2:#141414; --text:#D6D6D6; --muted:#9A9A9A; --gold:#CBA25E; --rule:#2a2a2a;
+      --accent-uae-red:#AE1C28; --accent-uae-green:#00732F; --accent-uae-black:#000; --accent-uae-white:#FFF;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+    .wrap{max-width:1140px;margin:0 auto;padding:32px 20px}
+    .sr-only{position:absolute;left:-9999px}
+    a{color:inherit;text-decoration:none}
+
+    /* Zero-exit layout */
+    header, main, footer{display:block}
+    .sticky-cta{position:fixed;bottom:20px;right:20px;display:flex;gap:10px;z-index:1000}
+    .btn{background:var(--gold);color:#0b0b0b;border:0;padding:14px 18px;border-radius:10px;font-weight:600;cursor:pointer}
+    .btn--outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+
+    /* Hero */
+    .hero{padding:88px 0;background:linear-gradient(180deg,rgba(203,162,94,0.10)_0%,rgba(203,162,94,0.00)_35%),radial-gradient(1200px_600px_at_80%_-10%,rgba(255,255,255,0.04),transparent 70%)}
+    .hero__eyebrow{letter-spacing:.12em;color:var(--muted);text-transform:uppercase;font-size:12px}
+    .hero__h1{font-family:"Tex Gyre Termes","Playfair Display",serif;font-weight:600;font-size:48px;line-height:1.1;margin:12px 0 12px}
+    .hero__sub{max-width:760px;color:#cfcfcf;font-size:18px}
+    .hero__bar{display:flex;gap:16px;align-items:center;margin-top:22px}
+    .countdown{display:flex;gap:10px;align-items:center;border:1px solid var(--rule);border-radius:12px;padding:10px 12px;background:var(--bg-2)}
+    .countdown__t{font-variant-numeric:tabular-nums;font-weight:700}
+    .tag{border:1px solid var(--rule);border-radius:999px;padding:8px 12px;font-size:12px;color:#c7c7c7}
+    .hero__media{margin-top:38px;border:1px solid var(--rule);border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#121212,#0b0b0b);padding:18px}
+    .hero__img{width:100%;height:460px;object-fit:cover;background:#0a0a0a;display:flex;align-items:center;justify-content:center;color:#444;font-size:14px}
+
+    /* Section */
+    section{padding:64px 0;border-top:1px solid var(--rule)}
+    .sec__h2{font-family:"Tex Gyre Termes","Playfair Display",serif;font-size:32px;margin:0 0 8px}
+    .sec__lead{color:#cfcfcf;max-width:780px;margin:0 0 22px}
+
+    /* Grid */
+    .grid{display:grid;gap:18px}
+    .grid--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    @media (max-width:1024px){.grid--4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:640px){.grid--4{grid-template-columns:1fr}}
+
+    .card{border:1px solid var(--rule);border-radius:14px;overflow:hidden;background:linear-gradient(180deg,#111,#0E0E0E)}
+    .card__img{background:#0c0c0c;height:190px;display:flex;align-items:center;justify-content:center;color:#444;font-size:12px}
+    .card__bd{padding:16px}
+    .card__t{font-weight:600}
+    .card__m{color:#bdbdbd;font-size:14px;margin-top:6px}
+    .pill{display:inline-block;margin-top:10px;padding:6px 10px;border:1px solid var(--rule);border-radius:999px;font-size:12px;color:#bdbdbd}
+
+    /* Tech picks scroller */
+    .picks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    @media (max-width:900px){.picks{grid-template-columns:1fr}}
+    .pick{display:flex;gap:16px;border:1px solid var(--rule);border-radius:14px;padding:16px;background:linear-gradient(180deg,#111,#0E0E0E)}
+    .pick__img{width:110px;height:110px;background:#0b0b0b;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#444;font-size:10px;flex-shrink:0}
+
+    /* Event block */
+    .bullets{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+    .bullet{border:1px solid var(--rule);border-radius:999px;padding:8px 12px;font-size:12px;color:#c7c7c7}
+
+    /* Logos */
+    .logos{display:flex;gap:26px;flex-wrap:wrap;align-items:center;opacity:.8}
+    .logos__box{width:140px;height:40px;background:#121212;border:1px solid var(--rule);border-radius:8px}
+
+    /* Form */
+    .form{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:760px}
+    @media (max-width:720px){.form{grid-template-columns:1fr}}
+    .in{background:#0f0f0f;border:1px solid var(--rule);border-radius:10px;color:var(--text);padding:14px}
+    .in::placeholder{color:#777}
+    textarea.in{min-height:120px}
+    .micro{color:#9a9a9a;font-size:12px;margin-top:10px}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,var(--rule),transparent);margin:26px 0}
+
+    /* Flag cue */
+    .uae-cue{display:inline-flex;gap:6px;align-items:center}
+    .uae-flag{display:inline-grid;grid-template-columns:12px 12px 12px 12px;height:10px;border-radius:2px;overflow:hidden;border:1px solid var(--rule)}
+    .uae-flag span:nth-child(1){background:var(--accent-uae-red)}
+    .uae-flag span:nth-child(2){background:var(--accent-uae-green)}
+    .uae-flag span:nth-child(3){background:var(--accent-uae-white)}
+    .uae-flag span:nth-child(4){background:var(--accent-uae-black)}
+
+    footer{padding:30px 0;border-top:1px solid var(--rule);color:#bdbdbd;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="sticky-cta">
+    <a href="#lead" class="btn">Book National Day Package</a>
+    <a href="https://wa.me/971581232600" class="btn btn--outline" aria-label="Chat on WhatsApp">WhatsApp Our Team</a>
+  </div>
+
+  <header class="wrap hero" aria-label="Hero">
+    <div class="uae-cue hero__eyebrow"><span class="uae-flag" aria-hidden="true"><span></span><span></span><span></span><span></span></span> UAE National Day</div>
+    <h1 class="hero__h1">Celebrate UAE National Day in Executive Style</h1>
+    <p class="hero__sub">Limited corporate gift editions and turnkey event production by Beyond Dubai. Corporate-only. MOQ 100+ units. UAE-wide delivery.</p>
+    <div class="hero__bar">
+      <div class="tag">Accepting 10 more bulk orders before 20 Nov</div>
+      <div class="countdown" role="timer" aria-live="polite"><span>Cut‑off in</span><span class="countdown__t" id="cd-d"></span><span>d</span><span class="countdown__t" id="cd-h"></span><span>h</span><span class="countdown__t" id="cd-m"></span><span>m</span></div>
+      <a href="#lead" class="btn">Book Your Package</a>
+    </div>
+    <div class="hero__media" aria-hidden="true">
+      <div class="hero__img">Hero Image: Add hero-giftset.webp</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Gifts grid -->
+    <section class="wrap" aria-labelledby="gifts">
+      <h2 id="gifts" class="sec__h2">Premium Corporate Gifts, Tailored</h2>
+      <p class="sec__lead">Elegant totes, dateless leather diaries, shawls, and curated executive sets. Fully brandable. MOQ 100+. Delivery across UAE.</p>
+      <div class="grid grid--4">
+        <article class="card"><div class="card__img">Tote Image</div><div class="card__bd"><div class="card__t">Beach‑Style Tote</div><div class="card__m">Durable canvas with discreet UAE detail. Ideal for employee kits.</div><div class="pill">MOQ 100</div></div></article>
+        <article class="card"><div class="card__img">Diary Image</div><div class="card__bd"><div class="card__t">Dateless Leather Diary</div><div class="card__m">Embossed logo, gold-edged pages. Year‑agnostic gifting.</div><div class="pill">Custom branding</div></div></article>
+        <article class="card"><div class="card__img">Shawl Image</div><div class="card__bd"><div class="card__t">Shawl & Scarf</div><div class="card__m">Refined weave, gift‑ready wrap. Subtle national palette.</div><div class="pill">UAE-wide delivery</div></div></article>
+        <article class="card"><div class="card__img">Executive Set</div><div class="card__bd"><div class="card__t">Executive Gift Set</div><div class="card__m">Curated box with card, ribbon, and seal. Ready to present.</div><div class="pill">Volume pricing</div></div></article>
+      </div>
+    </section>
+
+    <!-- Tech picks sourced from catalog -->
+    <section class="wrap" aria-labelledby="tech">
+      <h2 id="tech" class="sec__h2">Executive Tech Selections</h2>
+      <p class="sec__lead">Modern, practical, and brandable technology gifts curated for leadership teams and VIP clients.</p>
+      <div class="picks">
+        <div class="pick">
+          <div class="pick__img">ONEX</div>
+          <div>
+            <div class="card__t">ONEX Smart Mag A5 Organizer (ITFO 1199/1200/1201)</div>
+            <div class="card__m">10,000mAh powerbank + 15W Mag charging, recycled PU, light‑up logo. Includes 32GB USB.</div>
+            <div class="pill">Branding: UV / Laser</div>
+          </div>
+        </div>
+        <div class="pick">
+          <div class="pick__img">ALBECK</div>
+          <div>
+            <div class="card__t">ALBECK Recycled Leather Powerbank (ITPB 1140/1141)</div>
+            <div class="card__m">10,000mAh with 10W wireless and 18W PD fast charge. Executive finish.</div>
+            <div class="pill">Eco: RCS</div>
+          </div>
+        </div>
+        <div class="pick">
+          <div class="pick__img">FUSION</div>
+          <div>
+            <div class="card__t">FUSION 6‑in‑1 Travel Powerbank (ITPB 1247)</div>
+            <div class="card__m">10,000mAh with dual Mag wireless + swappable US/UK/EU/AUS plugs, inbuilt C & Lightning.</div>
+            <div class="pill">Travel‑ready</div>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="picks">
+        <div class="pick">
+          <div class="pick__img">BRELA</div>
+          <div>
+            <div class="card__t">BRELA Laptop Stand + Retractable Cable Set (MTST 1167/1168)</div>
+            <div class="card__m">Compact recycled stand with retractable 6‑in‑1 cable. Kraft gift box.</div>
+            <div class="pill">Desk upgrade</div>
+          </div>
+        </div>
+        <div class="pick">
+          <div class="pick__img">SOLANO</div>
+          <div>
+            <div class="card__t">SOLANO Mag Wireless Powerbank (ITPB 1248)</div>
+            <div class="card__m">10,000mAh, 15W Mag wireless + inbuilt C & Lightning and iWatch charging. Kickstand.</div>
+            <div class="pill">All‑in‑one</div>
+          </div>
+        </div>
+        <div class="pick">
+          <div class="pick__img">DIPLOMAT</div>
+          <div>
+            <div class="card__t">SKROSS Diplomat Passport Set (TASK 2198)</div>
+            <div class="card__m">Premium passport wallet + luggage tag. Swiss design, gift box ready.</div>
+            <div class="pill">Travel suite</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event production crossover -->
+    <section class="wrap" aria-labelledby="event">
+      <h2 id="event" class="sec__h2">One Partner. Full Celebration.</h2>
+      <p class="sec__lead">From concept and décor to staging, lighting, entertainment, and guest flow. We build turnkey National Day experiences aligned with your brand and gifts.</p>
+      <div class="bullets">
+        <div class="bullet">Concept & Design</div>
+        <div class="bullet">Production & Logistics</div>
+        <div class="bullet">On‑Site Management</div>
+      </div>
+      <div class="hero__media" aria-hidden="true" style="margin-top:20px">
+        <div class="hero__img" style="height:320px">Event Photo: Add event-shot.webp</div>
+      </div>
+      <div style="margin-top:18px"><a href="#lead" class="btn btn--outline">Request Event + Gift Quote</a></div>
+    </section>
+
+    <!-- Social proof -->
+    <section class="wrap" aria-labelledby="trust">
+      <h2 id="trust" class="sec__h2">Trusted Across the UAE</h2>
+      <p class="sec__lead">Select partners and clients.</p>
+      <div class="logos" aria-label="Client logos">
+        <div class="logos__box"></div>
+        <div class="logos__box"></div>
+        <div class="logos__box"></div>
+        <div class="logos__box"></div>
+      </div>
+      <blockquote style="margin-top:18px;color:#cfcfcf">"Beyond elevated our National Day—flawless gifts and execution."</blockquote>
+    </section>
+
+    <!-- Pricing & MOQ banner -->
+    <section class="wrap" aria-labelledby="moq">
+      <h2 id="moq" class="sec__h2">Corporate‑only. MOQ 100 units.</h2>
+      <p class="sec__lead">Custom branding. UAE‑wide delivery. Limited production windows ahead of 2 Dec.</p>
+    </section>
+
+    <!-- Bundles & Volume Pricing -->
+    <section class="wrap" aria-labelledby="bundles">
+      <h2 id="bundles" class="sec__h2">Bundles & Volume Pricing</h2>
+      <p class="sec__lead">Select a tier. Get a fast quote. Pricing scales by quantity, branding method, and lead time.</p>
+      <div class="grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:18px">
+        <div class="card">
+          <div class="card__bd">
+            <div class="card__t">Essential • 100 units</div>
+            <div class="card__m">One core gift + premium packaging.<br/>Suggested SKUs: ITPB 1140/1141, ITWC 1211/1212, MTST 1165/1166.</div>
+            <div class="pill">Price: On request</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__bd">
+            <div class="card__t">Signature • 250 units</div>
+            <div class="card__m">Two‑piece set + custom card + ribbon seal.<br/>Suggested SKUs: ITFO 1199/1200/1201, ITPB 1248 or ITWC 1254/1255.</div>
+            <div class="pill">Price: On request</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__bd">
+            <div class="card__t">Executive • 500+ units</div>
+            <div class="card__m">Curated 3‑piece set + VIP boxes + logistics plan.<br/>Suggested SKUs: ITPB 1247, MTST 1167/1168, TASK 2198.</div>
+            <div class="pill">Volume pricing: On request</div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:18px"><a href="#lead" class="btn">Request My Quote</a></div>
+      <div class="micro">Final pricing depends on item selection, branding (UV / Laser / Deboss), packaging, and delivery city.</div>
+    </section>
+
+    <!-- Lead capture -->
+    <section class="wrap" id="lead" aria-labelledby="lead-h">
+      <h2 id="lead-h" class="sec__h2">Secure Your National Day Package</h2>
+      <p class="sec__lead">Limited slots remaining before 20 Nov cut‑off. Submit your brief to lock production.</p>
+      <form class="form" onsubmit="event.preventDefault(); alert('Thanks. Our team will contact you shortly.');">
+        <input class="in" name="company" placeholder="Company Name" required />
+        <input class="in" name="name" placeholder="Full Name" required />
+        <input class="in" name="phone" placeholder="Phone (UAE)" required />
+        <input class="in" name="email" placeholder="Email Address" type="email" required />
+        <input class="in" name="qty" placeholder="Quantity (MOQ 100+)" required />
+        <input class="in" name="city" placeholder="City" />
+        <textarea class="in" name="notes" placeholder="Notes (custom branding, delivery, event details)"></textarea>
+        <button class="btn" type="submit">Submit Inquiry</button>
+      </form>
+      <div class="micro">By submitting, you agree to be contacted about National Day packages.</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>Beyond Concierge Events Co. LLC</div>
+      <div>TRN 104655520500003</div>
+      <div class="micro">Availability subject to confirmation before 20 Nov.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Countdown to Nov 20, 23:59 GST (UTC+4)
+    const target = new Date('2025-11-20T19:59:00Z').getTime();
+    const elD = document.getElementById('cd-d');
+    const elH = document.getElementById('cd-h');
+    const elM = document.getElementById('cd-m');
+    function tick(){
+      const now = Date.now();
+      const diff = Math.max(0, target - now);
+      const d = Math.floor(diff/86400000);
+      const h = Math.floor((diff%86400000)/3600000);
+      const m = Math.floor((diff%3600000)/60000);
+      elD.textContent = String(d).padStart(2,'0');
+      elH.textContent = String(h).padStart(2,'0');
+      elM.textContent = String(m).padStart(2,'0');
+    }
+    tick(); setInterval(tick, 30000);
+  </script>
+
+  <!-- Basic analytics hooks -->
+  <script>
+    document.querySelectorAll('.btn').forEach(b=>{
+      b.addEventListener('click', e=>{ window.__analytics && window.__analytics(b.textContent.trim()); });
+    });
+  </script>
+</body>
+</html>
