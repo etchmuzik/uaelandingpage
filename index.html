@@ -44,6 +44,15 @@
     .hero__img{width:100%;height:460px;background:linear-gradient(135deg,#1a1a1a,#0d0d0d);position:relative;overflow:hidden}
     .hero__img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 
+    /* Hero Slider */
+    .hero__slider{position:relative;width:100%;height:460px}
+    .hero__slide{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out}
+    .hero__slide.active{opacity:1}
+    .hero__slider-dots{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:12px;z-index:10}
+    .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.3);cursor:pointer;transition:all 0.3s ease}
+    .dot.active{background:rgba(203,162,94,1);width:24px;border-radius:5px}
+    .dot:hover{background:rgba(255,255,255,0.5)}
+
     /* Section */
     section{padding:64px 0;border-top:1px solid var(--rule)}
     .sec__h2{font-family:"Tex Gyre Termes","Playfair Display",serif;font-size:32px;margin:0 0 8px}
@@ -108,7 +117,7 @@
     textarea.in--compact{min-height:80px}
 
     /* WhatsApp banner */
-    .whatsapp-banner{background:linear-gradient(135deg,#25D366,#1DA851);padding:16px 20px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.2)}
+    .whatsapp-banner{background:linear-gradient(135deg,#25D366,#1DA851);padding:8px 20px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.2)}
     .whatsapp-banner__link{display:inline-flex;align-items:center;gap:12px;color:#fff;text-decoration:none;transition:transform 0.2s ease;max-width:100%}
     .whatsapp-banner__link:hover{transform:scale(1.02)}
     .whatsapp-banner__icon{font-size:28px;line-height:1}
@@ -178,7 +187,7 @@
       .countdown__label{font-size:10px}
 
       /* WhatsApp banner optimization */
-      .whatsapp-banner{padding:12px 16px}
+      .whatsapp-banner{padding:6px 16px}
       .whatsapp-banner__link{gap:10px}
       .whatsapp-banner__title{font-size:15px;line-height:1.3}
 
@@ -250,14 +259,33 @@
       </div>
     </div>
     <div class="hero__media" aria-hidden="true">
-      <div class="hero__img">
-        <img
-          src="images/hero-national-day.jpg"
-          alt="UAE National Day corporate gift collection display"
-          width="1100"
-          height="460"
-          loading="eager"
-        />
+      <div class="hero__slider">
+        <div class="hero__slide active">
+          <div class="hero__img">
+            <img
+              src="images/hero-national-day.jpg"
+              alt="UAE National Day corporate gift collection - Slide 1"
+              width="1100"
+              height="460"
+              loading="eager"
+            />
+          </div>
+        </div>
+        <div class="hero__slide">
+          <div class="hero__img">
+            <img
+              src="images/hero2.jpg"
+              alt="UAE National Day corporate gift collection - Slide 2"
+              width="1100"
+              height="460"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="hero__slider-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+        </div>
       </div>
     </div>
   </header>
@@ -528,6 +556,52 @@
         hideModal();
       });
     });
+
+    // Hero Slider Auto-Advance
+    (function() {
+      const slides = document.querySelectorAll('.hero__slide');
+      const dots = document.querySelectorAll('.hero__slider-dots .dot');
+      let currentSlide = 0;
+      let autoAdvanceTimer;
+
+      function showSlide(index) {
+        // Remove active class from all slides and dots
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        // Add active class to current slide and dot
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+      }
+
+      function nextSlide() {
+        const next = (currentSlide + 1) % slides.length;
+        showSlide(next);
+      }
+
+      function startAutoAdvance() {
+        autoAdvanceTimer = setInterval(nextSlide, 5000); // 5 seconds
+      }
+
+      function stopAutoAdvance() {
+        clearInterval(autoAdvanceTimer);
+      }
+
+      // Dot click handlers
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          showSlide(index);
+          stopAutoAdvance();
+          startAutoAdvance(); // Restart timer after manual navigation
+        });
+      });
+
+      // Initialize slider
+      if (slides.length > 0) {
+        startAutoAdvance();
+      }
+    })();
   </script>
 </body>
 </html>
