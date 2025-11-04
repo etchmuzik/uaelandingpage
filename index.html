@@ -185,6 +185,7 @@
         <span class="countdown__t" id="cd-d"></span><span class="countdown__label">d</span>
         <span class="countdown__t" id="cd-h"></span><span class="countdown__label">h</span>
         <span class="countdown__t" id="cd-m"></span><span class="countdown__label">m</span>
+        <span class="countdown__t" id="cd-s"></span><span class="countdown__label">s</span>
       </div>
     </div>
     <div class="hero__media" aria-hidden="true">
@@ -283,7 +284,6 @@
           />
         </div>
       </div>
-      <div style="margin-top:18px"><a href="#lead" class="btn btn--outline">Request Event + Gift Quote</a></div>
     </section>
 
     <!-- Pricing & MOQ banner -->
@@ -421,17 +421,20 @@
     const elD = document.getElementById('cd-d');
     const elH = document.getElementById('cd-h');
     const elM = document.getElementById('cd-m');
+    const elS = document.getElementById('cd-s');
     function tick(){
       const now = Date.now();
       const diff = Math.max(0, target - now);
       const d = Math.floor(diff/86400000);
       const h = Math.floor((diff%86400000)/3600000);
       const m = Math.floor((diff%3600000)/60000);
+      const s = Math.floor((diff%60000)/1000);
       elD.textContent = String(d).padStart(2,'0');
       elH.textContent = String(h).padStart(2,'0');
       elM.textContent = String(m).padStart(2,'0');
+      elS.textContent = String(s).padStart(2,'0');
     }
-    tick(); setInterval(tick, 30000);
+    tick(); setInterval(tick, 1000);
   </script>
 
   <!-- Basic analytics hooks -->
