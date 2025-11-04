@@ -153,6 +153,33 @@
     .collection-item{display:inline-block;padding:8px 14px;border:1px solid var(--rule);border-radius:8px;font-size:13px;color:#cfcfcf;background:#0a0a0a;transition:border-color 0.2s ease,color 0.2s ease}
     .collection-item:hover{border-color:var(--gold);color:#fff}
     @media (max-width:640px){.collection-category{padding:16px}.collection-category__title{font-size:16px}.collection-item{font-size:12px;padding:6px 10px}}
+
+    /* Mobile Optimization (Comprehensive) */
+    @media (max-width:640px){
+      /* Touch target fixes - iOS/Android 44x44px minimum */
+      .btn{padding:16px 20px;min-height:44px;font-size:15px}
+      .modal__close{font-size:24px;padding:10px;min-width:44px;min-height:44px;line-height:1}
+
+      /* Font size fixes - prevent auto-zoom on iOS */
+      .card__m{font-size:15px}
+      .pill,.bullet{font-size:13px}
+      .in{font-size:16px;padding:16px}
+
+      /* Responsive image heights */
+      .hero__img{height:300px}
+
+      /* Countdown optimization for small screens */
+      .countdown{gap:8px;padding:10px 14px}
+      .countdown__t{font-size:16px}
+      .countdown__label{font-size:11px}
+
+      /* Modal tighter spacing */
+      .modal{padding:12px}
+      .form-group{margin-bottom:14px}
+
+      /* Hero title smaller on mobile */
+      .hero__h1{font-size:36px}
+    }
   </style>
 </head>
 <body>
