@@ -31,6 +31,8 @@
 
     /* Hero */
     .hero{padding:88px 0;background:linear-gradient(180deg,rgba(203,162,94,0.10)_0%,rgba(203,162,94,0.00)_35%),radial-gradient(1200px_600px_at_80%_-10%,rgba(255,255,255,0.04),transparent 70%)}
+    .hero__logo{margin-bottom:32px;text-align:center}
+    .hero__logo img{max-width:300px;height:auto;display:inline-block}
     .hero__eyebrow{letter-spacing:.12em;color:var(--muted);text-transform:uppercase;font-size:12px}
     .hero__h1{font-family:"Tex Gyre Termes","Playfair Display",serif;font-weight:600;font-size:48px;line-height:1.1;margin:12px 0 12px}
     .hero__sub{max-width:760px;color:#cfcfcf;font-size:18px}
@@ -201,6 +203,10 @@
 
       /* Hero title smaller on mobile */
       .hero__h1{font-size:36px}
+
+      /* Logo responsive sizing */
+      .hero__logo{margin-bottom:24px}
+      .hero__logo img{max-width:200px}
     }
 
     /* Extra small screens - iPhone SE, old Android */
@@ -244,6 +250,9 @@
   </div>
 
   <header class="wrap hero" aria-label="Hero">
+    <div class="hero__logo">
+      <img src="images/logo.png" alt="Beyond Dubai Logo" width="300" height="auto" loading="eager" />
+    </div>
     <div class="uae-cue hero__eyebrow"><span class="uae-flag" aria-hidden="true"><span></span><span></span><span></span><span></span></span> UAE National Day</div>
     <h1 class="hero__h1">Celebrate UAE National Day in Executive Style</h1>
     <p class="hero__sub">Limited corporate gift editions and turnkey event production by Beyond Dubai. Corporate-only. MOQ 100+ units. UAE-wide delivery.</p>
@@ -262,8 +271,8 @@
         <div class="hero__slide active">
           <div class="hero__img">
             <img
-              src="images/hero-national-day.jpg"
-              alt="UAE National Day corporate gift collection - Slide 1"
+              src="images/hero-black.jpg"
+              alt="UAE National Day corporate gift collection - Black Edition"
               width="1100"
               height="460"
               loading="eager"
@@ -273,8 +282,8 @@
         <div class="hero__slide">
           <div class="hero__img">
             <img
-              src="images/hero2.jpg"
-              alt="UAE National Day corporate gift collection - Slide 2"
+              src="images/hero-white.jpg"
+              alt="UAE National Day corporate gift collection - White Edition"
               width="1100"
               height="460"
               loading="lazy"
@@ -303,23 +312,11 @@
             />
           </div>
         </div>
-        <div class="hero__slide">
-          <div class="hero__img">
-            <img
-              src="images/54.jpg"
-              alt="UAE National Day corporate gifts showcase"
-              width="1100"
-              height="460"
-              loading="lazy"
-            />
-          </div>
-        </div>
         <div class="hero__slider-dots">
           <span class="dot active" data-slide="0"></span>
           <span class="dot" data-slide="1"></span>
           <span class="dot" data-slide="2"></span>
           <span class="dot" data-slide="3"></span>
-          <span class="dot" data-slide="4"></span>
         </div>
       </div>
     </div>
