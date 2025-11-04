@@ -122,6 +122,20 @@
     .uae-flag span:nth-child(4){background:var(--accent-uae-black)}
 
     footer{padding:30px 0;border-top:1px solid var(--rule);color:#bdbdbd;font-size:13px}
+
+    /* Modal */
+    .modal{position:fixed;top:0;left:0;width:100%;height:100%;z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px}
+    .modal__overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(4px)}
+    .modal__content{position:relative;background:linear-gradient(180deg,#111,#0E0E0E);border:1px solid var(--rule);border-radius:16px;padding:32px;max-width:480px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+    .modal__close{position:absolute;top:16px;right:16px;background:transparent;border:0;color:var(--muted);font-size:32px;line-height:1;cursor:pointer;padding:4px 8px;transition:color 0.2s}
+    .modal__close:hover{color:var(--text)}
+    .modal__title{font-family:"Tex Gyre Termes","Playfair Display",serif;font-size:24px;margin:0 0 8px;color:#fff}
+    .modal__desc{color:#cfcfcf;font-size:14px;margin:0 0 24px}
+    .form-group{margin-bottom:16px}
+    .form-group label{display:block;color:#cfcfcf;font-size:13px;margin-bottom:6px;font-weight:500}
+    .modal__submit{width:100%;margin-top:8px}
+    .modal__note{text-align:center;color:#9a9a9a;font-size:11px;margin-top:16px;line-height:1.4}
+    @media (max-width:640px){.modal__content{padding:24px;max-width:100%}.modal__title{font-size:20px}}
   </style>
 </head>
 <body>
@@ -353,6 +367,34 @@
     </div>
   </footer>
 
+  <!-- Catalog Download Modal -->
+  <div id="catalog-modal" class="modal" style="display:none">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <button class="modal__close" aria-label="Close modal">&times;</button>
+      <h3 class="modal__title">Download Corporate Gifts Catalog</h3>
+      <p class="modal__desc">Please provide your details to download our exclusive UAE National Day catalog</p>
+      <form id="catalog-form" name="catalog-download" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="catalog-download" />
+        <p style="display:none"><label>Don't fill: <input name="bot-field" /></label></p>
+        <div class="form-group">
+          <label for="catalog-name">Full Name *</label>
+          <input id="catalog-name" class="in" name="name" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <label for="catalog-phone">Phone Number *</label>
+          <input id="catalog-phone" class="in" name="phone" type="tel" placeholder="+971 XX XXX XXXX" required />
+        </div>
+        <div class="form-group">
+          <label for="catalog-company">Company Name (Optional)</label>
+          <input id="catalog-company" class="in" name="company" placeholder="Your Company" />
+        </div>
+        <button type="submit" class="btn btn--email modal__submit">Download Catalog PDF</button>
+      </form>
+      <div class="modal__note">By downloading, you agree to receive updates about UAE National Day offerings.</div>
+    </div>
+  </div>
+
   <script>
     // Countdown to Nov 20, 23:59 GST (UTC+4)
     const target = new Date('2025-11-20T19:59:00Z').getTime();
@@ -376,6 +418,74 @@
   <script>
     document.querySelectorAll('.btn').forEach(b=>{
       b.addEventListener('click', e=>{ window.__analytics && window.__analytics(b.textContent.trim()); });
+    });
+  </script>
+
+  <!-- Catalog Modal Script -->
+  <script>
+    const modal = document.getElementById('catalog-modal');
+    const closeBtn = document.querySelector('.modal__close');
+    const overlay = document.querySelector('.modal__overlay');
+    const form = document.getElementById('catalog-form');
+
+    // Show modal when catalog buttons are clicked
+    function showCatalogModal(e) {
+      e.preventDefault();
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Hide modal
+    function hideModal() {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    // Attach to all catalog download buttons
+    document.querySelectorAll('a[href="corporate-gifts-catalog-2025.pdf"]').forEach(btn => {
+      btn.addEventListener('click', showCatalogModal);
+    });
+
+    // Close modal on X button or overlay click
+    closeBtn.addEventListener('click', hideModal);
+    overlay.addEventListener('click', hideModal);
+
+    // Handle form submission
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Submit form data to Netlify
+      const formData = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      })
+      .then(() => {
+        // Trigger PDF download
+        const link = document.createElement('a');
+        link.href = 'corporate-gifts-catalog-2025.pdf';
+        link.download = 'UAE-National-Day-Corporate-Gifts-Catalog-2025.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        // Show success message and close modal
+        alert('Thank you! Your catalog download will start shortly.');
+        form.reset();
+        hideModal();
+      })
+      .catch(() => {
+        alert('Download started! Thank you for your interest.');
+        // Still download even if form submission fails
+        const link = document.createElement('a');
+        link.href = 'corporate-gifts-catalog-2025.pdf';
+        link.download = 'UAE-National-Day-Corporate-Gifts-Catalog-2025.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        hideModal();
+      });
     });
   </script>
 </body>
