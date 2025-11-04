@@ -145,6 +145,14 @@
     .modal__submit{width:100%;margin-top:8px}
     .modal__note{text-align:center;color:#9a9a9a;font-size:11px;margin-top:16px;line-height:1.4}
     @media (max-width:640px){.modal__content{padding:24px;max-width:100%}.modal__title{font-size:20px}}
+
+    /* Collection Category */
+    .collection-category{border:1px solid var(--rule);border-radius:12px;padding:20px;background:linear-gradient(180deg,#111,#0E0E0E)}
+    .collection-category__title{font-family:"Tex Gyre Termes","Playfair Display",serif;font-size:18px;margin:0 0 14px;color:var(--gold);font-weight:600}
+    .collection-items{display:flex;flex-wrap:wrap;gap:10px}
+    .collection-item{display:inline-block;padding:8px 14px;border:1px solid var(--rule);border-radius:8px;font-size:13px;color:#cfcfcf;background:#0a0a0a;transition:border-color 0.2s ease,color 0.2s ease}
+    .collection-item:hover{border-color:var(--gold);color:#fff}
+    @media (max-width:640px){.collection-category{padding:16px}.collection-category__title{font-size:16px}.collection-item{font-size:12px;padding:6px 10px}}
   </style>
 </head>
 <body>
@@ -219,48 +227,138 @@
               loading="lazy"
             />
           </div>
-          <div class="card__bd"><div class="card__t">Beach‑Style Tote</div><div class="card__m">Durable canvas with discreet UAE detail. Ideal for employee kits.</div><div class="pill">MOQ 100</div></div>
+          <div class="card__bd"><div class="card__t">Recycled Canvas Tote (CSB-11)</div><div class="card__m">380×415 mm, 220 GSM recycled cotton canvas. Ideal for employee kits.</div><div class="pill">MOQ 100 • Screen/DTF branding</div></div>
         </article>
         <article class="card">
           <div class="card__img">
             <img
               src="images/leather-diary.jpg"
               srcset="images/leather-diary.jpg 1x, images/leather-diary@2x.jpg 2x"
-              alt="Dateless leather diary with embossed logo"
+              alt="PU A5 Notebook MBA5PU with pen holder"
               width="280"
               height="190"
               loading="lazy"
             />
           </div>
-          <div class="card__bd"><div class="card__t">Dateless Leather Diary</div><div class="card__m">Embossed logo, gold-edged pages. Year‑agnostic gifting.</div><div class="pill">Custom branding</div></div>
+          <div class="card__bd"><div class="card__t">PU A5 Notebook (MBA5PU)</div><div class="card__m">146×210 mm dateless notebook with pen holder. Year-agnostic gifting.</div><div class="pill">Deboss/foil options</div></div>
         </article>
         <article class="card">
           <div class="card__img">
             <img
               src="images/shawl-scarf.jpg"
               srcset="images/shawl-scarf.jpg 1x, images/shawl-scarf@2x.jpg 2x"
-              alt="Premium shawl and scarf with UAE color palette"
+              alt="UAE Satin Scarf SC-08 with national colors"
               width="280"
               height="190"
               loading="lazy"
             />
           </div>
-          <div class="card__bd"><div class="card__t">Shawl & Scarf</div><div class="card__m">Refined weave, gift‑ready wrap. Subtle national palette.</div><div class="pill">UAE-wide delivery</div></div>
+          <div class="card__bd"><div class="card__t">UAE Satin Scarf (SC-08)</div><div class="card__m">17×135 cm satin scarf. Perfect for staff and guest gifting.</div><div class="pill">Staff/guest gifting</div></div>
         </article>
         <article class="card">
           <div class="card__img">
             <img
               src="images/executive-gift-set.jpg"
               srcset="images/executive-gift-set.jpg 1x, images/executive-gift-set@2x.jpg 2x"
-              alt="Executive corporate gift set with custom packaging"
+              alt="UAE Gift Set GS-UAE-01 National Day corporate gift"
               width="280"
               height="190"
               loading="lazy"
             />
           </div>
-          <div class="card__bd"><div class="card__t">Executive Gift Set</div><div class="card__m">Curated box with card, ribbon, and seal. Ready to present.</div><div class="pill">Volume pricing</div></div>
+          <div class="card__bd"><div class="card__t">UAE Gift Set (GS-UAE-01)</div><div class="card__m">275×275×45 mm National Day gift set with custom card & sleeve.</div><div class="pill">Custom card & sleeve</div></div>
         </article>
       </div>
+    </section>
+
+    <!-- National Day Collection Picks -->
+    <section class="wrap" aria-labelledby="collection">
+      <h2 id="collection" class="sec__h2">National Day Collection Picks</h2>
+      <p class="sec__lead">Curated SKUs for fast corporate fulfillment — badges, flags, bags, drinkware, wearables, stationery, gift sets, and eco kids' items. MOQ 100+.</p>
+
+      <div style="display:grid;gap:24px;margin-top:32px">
+        <!-- Badges -->
+        <div class="collection-category">
+          <h3 class="collection-category__title">Badges (Magnet-back)</h3>
+          <div class="collection-items">
+            <span class="collection-item">Flat Falcon (2100-22100-2 / 2100-12100-1)</span>
+            <span class="collection-item">UAE Flag (NDB-21-WM)</span>
+            <span class="collection-item">Three-Finger Sign (2100-22100-2)</span>
+            <span class="collection-item">Map Flag (NDB-17)</span>
+          </div>
+        </div>
+
+        <!-- Flags & Table Stands -->
+        <div class="collection-category">
+          <h3 class="collection-category__title">Flags & Table Stands</h3>
+          <div class="collection-items">
+            <span class="collection-item">String flags (3000-20300-1 / 3000-21300-1)</span>
+            <span class="collection-item">Fabric flags (3000-41300-1 / 3000-42300-1)</span>
+            <span class="collection-item">Metal-pole flags (3000-11300-1 / 3000-12300-1)</span>
+          </div>
+        </div>
+
+        <!-- Drinkware -->
+        <div class="collection-category">
+          <h3 class="collection-category__title">Drinkware</h3>
+          <div class="collection-items">
+            <span class="collection-item">Matte SS Bottles (750 ml): SSPBSS-02, SSPBSS-03</span>
+            <span class="collection-item">Glass Sport bottles (500 ml): GSPB-03 (bronze cap)</span>
+            <span class="collection-item">Cork Tumblers (350 ml): TM-015</span>
+            <span class="collection-item">Bamboo Flasks (500/350 ml): BB-01 / BB-02</span>
+          </div>
+        </div>
+
+        <!-- Wearables -->
+        <div class="collection-category">
+          <h3 class="collection-category__title">Wearables</h3>
+          <div class="collection-items">
+            <span class="collection-item">Ribbon Wristbands: WB-01-UAE</span>
+            <span class="collection-item">Polyester/Satin Scarves (130×13.5 cm): SC-07, SC-08</span>
+            <span class="collection-item">Velvet Scarves (180×100 cm): SCU-02 (rectangle)</span>
+          </div>
+        </div>
+
+        <!-- Stationery -->
+        <div class="collection-category">
+          <h3 class="collection-category__title">Stationery</h3>
+          <div class="collection-items">
+            <span class="collection-item">PU Notebooks (A5): MBA5PU (dateless), MBA5PU-UAE (UAE-themed cover), MBA5PU-2025</span>
+            <span class="collection-item">Maxema UAE Flag Pens: MAX-ET900 (twist), NDP-06 (smooth flow)</span>
+            <span class="collection-item">White Pens: MAX-WHITE</span>
+          </div>
+        </div>
+
+        <!-- Gift Sets -->
+        <div class="collection-category">
+          <h3 class="collection-category__title">Gift Sets</h3>
+          <div class="collection-items">
+            <span class="collection-item">Drawstrings & Boxes: GS-UAE-01 (275×275×45mm), GS-UAE-05 (250×210×60mm)</span>
+            <span class="collection-item">Sadu Sets: GS-SADU-02 (4-pc), GS-SADU-03 (3-pc)</span>
+          </div>
+        </div>
+
+        <!-- Assorted & Scent -->
+        <div class="collection-category">
+          <h3 class="collection-category__title">Assorted & Scent</h3>
+          <div class="collection-items">
+            <span class="collection-item">Scented Candles (70g soy wax): CAND-01 (cup), CAND-02 (tin)</span>
+            <span class="collection-item">Electric Bakhoor: EB-01</span>
+          </div>
+        </div>
+
+        <!-- Eco / Kids -->
+        <div class="collection-category">
+          <h3 class="collection-category__title">Eco / Kids</h3>
+          <div class="collection-items">
+            <span class="collection-item">Plantable Kits: KIT-PLT-01, KIT-PLT-02</span>
+            <span class="collection-item">Pencils: PEN-ECO-01</span>
+            <span class="collection-item">Puzzles: PUZ-KID-01</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="micro" style="margin-top:24px;text-align:center">All items available with screen print, laser engraving, debossing, or UV print. Request catalog for full specs.</div>
     </section>
 
     <!-- Event production crossover -->
@@ -300,21 +398,21 @@
         <div class="card">
           <div class="card__bd">
             <div class="card__t">Essential • 100 units</div>
-            <div class="card__m">One core gift + premium packaging.<br/>Suggested SKUs: ITPB 1140/1141, ITWC 1211/1212, MTST 1165/1166.</div>
+            <div class="card__m">UAE Flag badge + PU Notebook + Maxema pen.<br/>SKUs: NDB-21-WM + MBA5PU + NDP-06</div>
             <div class="pill">Price: On request</div>
           </div>
         </div>
         <div class="card">
           <div class="card__bd">
             <div class="card__t">Signature • 250 units</div>
-            <div class="card__m">Two‑piece set + custom card + ribbon seal.<br/>Suggested SKUs: ITFO 1199/1200/1201, ITPB 1248 or ITWC 1254/1255.</div>
+            <div class="card__m">Recycled Canvas Tote + PU Notebook + Maxema twist pen + Satin Scarf.<br/>SKUs: CSB-11 + MBA5PU + MAX-ET900 + SC-08</div>
             <div class="pill">Price: On request</div>
           </div>
         </div>
         <div class="card">
           <div class="card__bd">
             <div class="card__t">Executive • 500+ units</div>
-            <div class="card__m">Curated 3‑piece set + VIP boxes + logistics plan.<br/>Suggested SKUs: ITPB 1247, MTST 1167/1168, TASK 2198.</div>
+            <div class="card__m">UAE Gift Set + Cork Tumbler + Tin Candle.<br/>SKUs: GS-UAE-01/05 + TM-015 + CAND-02</div>
             <div class="pill">Volume pricing: On request</div>
           </div>
         </div>
@@ -408,6 +506,10 @@
         <div class="form-group">
           <label for="catalog-company">Company Name (Optional)</label>
           <input id="catalog-company" class="in" name="company" placeholder="Your Company" />
+        </div>
+        <div class="form-group">
+          <label for="catalog-notes">Items of Interest (Optional)</label>
+          <textarea id="catalog-notes" class="in" name="notes" placeholder="e.g. 250× CSB-11 + 100× MBA5PU" rows="2"></textarea>
         </div>
         <button type="submit" class="btn btn--email modal__submit">Download Catalog PDF</button>
       </form>
