@@ -18,9 +18,16 @@
 
     /* Zero-exit layout */
     header, main, footer{display:block}
-    .sticky-cta{position:fixed;bottom:20px;right:20px;display:flex;gap:10px;z-index:1000}
     .btn{background:var(--gold);color:#0b0b0b;border:0;padding:14px 18px;border-radius:10px;font-weight:600;cursor:pointer}
     .btn--outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+
+    /* WhatsApp Widget */
+    .whatsapp-widget{position:fixed;bottom:24px;right:24px;z-index:1000;background:linear-gradient(135deg,#25D366,#1DA851);color:#fff;padding:16px 24px;border-radius:50px;display:flex;align-items:center;gap:12px;text-decoration:none;box-shadow:0 8px 24px rgba(37,211,102,0.4);transition:transform 0.3s ease,box-shadow 0.3s ease;animation:pulse 2s infinite}
+    .whatsapp-widget:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(37,211,102,0.5)}
+    .whatsapp-widget__icon{width:28px;height:28px;flex-shrink:0}
+    .whatsapp-widget__text{font-weight:600;font-size:15px;white-space:nowrap}
+    @keyframes pulse{0%,100%{box-shadow:0 8px 24px rgba(37,211,102,0.4)}50%{box-shadow:0 8px 24px rgba(37,211,102,0.6),0 0 0 8px rgba(37,211,102,0.1)}}
+    @media (max-width:640px){.whatsapp-widget{bottom:16px;right:16px;padding:12px 16px}.whatsapp-widget__icon{width:24px;height:24px}.whatsapp-widget__text{font-size:14px}}
 
     /* Hero */
     .hero{padding:88px 0;background:linear-gradient(180deg,rgba(203,162,94,0.10)_0%,rgba(203,162,94,0.00)_35%),radial-gradient(1200px_600px_at_80%_-10%,rgba(255,255,255,0.04),transparent 70%)}
@@ -139,10 +146,17 @@
   </style>
 </head>
 <body>
-  <div class="sticky-cta">
-    <a href="#lead" class="btn">Book National Day Package</a>
-    <a href="https://wa.me/+971525409801" class="btn btn--outline" aria-label="Chat on WhatsApp">WhatsApp Our Team</a>
-  </div>
+  <!-- WhatsApp Chat Widget -->
+  <a href="https://wa.me/+971525409801?text=Hi!%20I'm%20interested%20in%20UAE%20National%20Day%20corporate%20gifts.%20Can%20you%20send%20me%20a%20quote%3F"
+     class="whatsapp-widget"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" class="whatsapp-widget__icon">
+      <path fill="currentColor" d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.924 0-7.435 6.049-13.485 13.485-13.485s13.485 6.049 13.485 13.485c0 7.435-6.049 13.485-13.485 13.485zM21.947 18.679c-0.285-0.143-1.685-0.831-1.946-0.926-0.262-0.095-0.452-0.143-0.643 0.143s-0.738 0.926-0.905 1.117c-0.167 0.19-0.333 0.214-0.619 0.071s-1.207-0.446-2.299-1.419c-0.851-0.758-1.425-1.694-1.592-1.98s-0.018-0.44 0.125-0.583c0.128-0.128 0.285-0.333 0.428-0.5s0.19-0.285 0.285-0.476c0.095-0.19 0.048-0.357-0.024-0.5s-0.643-1.548-0.881-2.121c-0.232-0.559-0.467-0.482-0.643-0.491-0.167-0.008-0.357-0.010-0.548-0.010s-0.5 0.071-0.762 0.357c-0.262 0.285-1 0.976-1 2.381s1.024 2.762 1.167 2.953c0.143 0.19 2.012 3.070 4.871 4.304 0.679 0.292 1.210 0.467 1.623 0.598 0.682 0.217 1.303 0.187 1.794 0.113 0.547-0.082 1.685-0.689 1.923-1.354s0.238-1.236 0.167-1.354c-0.071-0.119-0.262-0.19-0.548-0.333z"></path>
+    </svg>
+    <span class="whatsapp-widget__text">Chat with us</span>
+  </a>
 
   <!-- Pre-hero WhatsApp banner -->
   <div class="whatsapp-banner">
